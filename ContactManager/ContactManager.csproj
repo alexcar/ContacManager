@@ -9,7 +9,6 @@
     <Folder Include="Models\LSP\" />
     <Folder Include="Models\ISP\" />
     <Folder Include="Models\DIP\" />
-    <Folder Include="Models\OCP\" />
   </ItemGroup>
 
   <ItemGroup>
