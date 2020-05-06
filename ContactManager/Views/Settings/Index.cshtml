@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+@*@model Dictionary<ContactManager.Models.LSP.ISettings, Dictionary<string, string>>*@
+@model Dictionary<ContactManager.Models.LSP.IReadableSettings, Dictionary<string, string>>
+
+<h1>All Settings</h1>
+<form asp-controller="Settings" asp-action="Save" method="post">
+    <input type="submit" value="Change Settings" />
+</form>
+
+<table border="1" cellpadding="10">
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Key.ToString()</td>
+            <td>
+                @foreach (var subItem in item.Value)
+                {
+                    <div>@subItem.Key = @subItem.Value</div>
+                }
+            </td>
+        </tr>
+    }
+</table>
+
