@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Change Passord</h1>
+<h4>Send notifications by:</h4>
+<form asp-controller="ChangePassword" asp-action="ChangePassword" method="post">
+    <select name="notificationType">
+        <option value="email">Email</option>
+        <option value="sms">SMS</option>
+        <option value="popup">Popup</option>
+    </select>
+    <input type="submit" value="Change Password" />
+</form>
+
